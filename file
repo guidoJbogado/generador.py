@@ -1,0 +1,11 @@
+#este codigo busca generar contraseñas aleatorias con una libreria random
+import random
+
+caracteres = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+longitud = int(input("Longitud de la contraseña deseada por el usuario (número):"))
+password = ""
+
+for i in range(longitud):
+    password += random.choice(caracteres)
+
+print ("Contraseña generada:", password)
