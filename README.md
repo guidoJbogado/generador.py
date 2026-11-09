@@ -1,1 +1,1 @@
-# generador.py
+# ecosis.py
