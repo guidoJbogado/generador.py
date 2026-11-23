@@ -58,5 +58,53 @@ async def duck(ctx):
     image_url = get_duck_image_url()
     await ctx.send(image_url)
 
+@bot.event
+async def on_ready():
+    print("Bot de contaminación conectado")
+
+
+@bot.command()
+async def start(ctx):
+    await ctx.send("¡Hola! Soy un bot que te informa sobre la contaminación ambiental.")
+    await ctx.send("Usa !contaminacion para aprender sobre el tema.")
+
+
+@bot.command()
+async def contaminacion(ctx):
+    mensaje = """
+    🌎 CONTAMINACIÓN AMBIENTAL
+
+    La contaminación ocurre cuando sustancias dañinas
+    afectan nuestro medio ambiente.
+
+    🌫️ Aire: humo de carros y fábricas.
+    💧 Agua: basura y químicos en los ríos.
+    🗑️ Suelo: residuos y plásticos.
+
+    🌱 ¿Cómo podemos ayudar?
+    - Reciclar.
+    - Ahorrar agua.
+    - Usar menos plástico.
+    - No arrojar basura.
+    """
+    await ctx.send(mensaje)
+
+
+@bot.command()
+async def consejo(ctx):
+    await ctx.send("🌱 Consejo: utiliza una botella reutilizable para reducir el plástico.")
+
+@bot.command()
+async def consejo2(ctx):
+    await ctx.send("🌱 Consejo: tene un compost en casa para desechar organicos, tambien sirve para tener buena tierra para la huerta.")
+
+@bot.command()
+async def consejo3(ctx):
+    await ctx.send("🌱 Consejo: hacele caso a las tres R: Reutiliza, Recicla y Reduci si no queres que el pais se vaya a la Rotonda.")
+
+@bot.command()
+async def consejo4(ctx):
+    await ctx.send("🌱 Consejo: fomenta el cuidado ambiental a todos los que conoscas.")
+
 
 bot.run("*token*")
